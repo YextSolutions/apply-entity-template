@@ -14,7 +14,7 @@ export async function applyTemplate(templateId: string, entityId: string) {
       body: requestBody
     };
 
-    await fetch(`https://sbx-api.yextapis.com/v2/accounts/me/entities/${entityId}?api_key=${API_KEY}&v=20230413&templateId=${templateId}`, requestOptions)
+    await fetch(`https://api.yextapis.com/v2/accounts/me/entities/${entityId}?api_key=${API_KEY}&v=20230413&templateId=${templateId}`, requestOptions)
       .then(response => response.text())
       .then(result => console.log(result))
       .catch(error => console.log('error', error));
